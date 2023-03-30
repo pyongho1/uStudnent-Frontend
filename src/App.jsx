@@ -19,7 +19,6 @@ import * as postService from "./services/postService";
 
 // styles
 import "./App.css";
-import Testing from "./pages/Testing/Testing";
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser());
@@ -70,14 +69,6 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/testing"
-          element={
-            <ProtectedRoute user={user}>
-              <Testing posts={posts} />
             </ProtectedRoute>
           }
         />
