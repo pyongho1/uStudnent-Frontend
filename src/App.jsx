@@ -9,6 +9,7 @@ import Landing from "./pages/Landing/Landing";
 import Profiles from "./pages/Profiles/Profiles";
 import ChangePassword from "./pages/ChangePassword/ChangePassword";
 import NewPost from "./pages/NewPost/NewPost";
+import PostDetail from "./pages/PostDetail/PostDetail";
 
 // components
 import NavBar from "./components/NavBar/NavBar";
@@ -85,6 +86,12 @@ const App = () => {
             <ProtectedRoute user={user}>
               <NewPost handleAddPost={handleAddPost} posts={posts} />
             </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/posts/:id"
+          element={
+            <PostDetail posts={posts} />
           }
         />
       </Routes>
