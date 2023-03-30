@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px solid;
   height: 100vh;
-  width: auto;
+  /* width: auto; */
+  width: 100%;
 }
 
 .contentContainer {
@@ -12,6 +12,10 @@
   width: 65vw;
   height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
+}
+
+.contentContainer > h1 {
+  margin-bottom: 100px;
 }
