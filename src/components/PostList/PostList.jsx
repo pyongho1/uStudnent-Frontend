@@ -4,6 +4,8 @@ import styles from "./PostList.module.css";
 // Bootstrap
 import Table from "react-bootstrap/Table";
 
+import { Link } from "react-router-dom";
+
 const PostList = ({ post, index, user }) => {
   return (
     <div className={styles.container}>
@@ -28,7 +30,7 @@ const PostList = ({ post, index, user }) => {
             <td>{post.author.name}</td>
             {/* <td>{post.title}</td> */}
             <td>
-              <a href="#">
+              <a href={`posts/${post._id}`}>
                 {post.title.length > 30
                   ? post.title.substring(0, 30) + "..."
                   : post.title}
