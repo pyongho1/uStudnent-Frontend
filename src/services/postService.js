@@ -28,6 +28,15 @@ const create = async (postData) => {
   }
 };
 
+const show = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`);
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 async function getAllPosts() {
   const res = await fetch(BASE_URL, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
@@ -35,4 +44,4 @@ async function getAllPosts() {
   return await res.json();
 }
 
-export { index, getAllPosts, create };
+export { index, getAllPosts, create, show };
