@@ -35,6 +35,12 @@ const App = () => {
     setUser(authService.getUser());
   };
 
+  const handleAddPost = async (postData) => {
+    const newPost = await postService.create(postData);
+    setPosts([newPost, ...posts]);
+    navigate("/");
+  };
+
   useEffect(() => {
     const fetchPosts = async () => {
       const postData = await postService.getAllPosts();

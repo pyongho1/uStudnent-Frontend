@@ -11,6 +11,23 @@ const index = async () => {
     console.log(error);
   }
 };
+
+const create = async (postData) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${tokenService.getToken()}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postData),
+    });
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 async function getAllPosts() {
   const res = await fetch(BASE_URL, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
@@ -18,4 +35,4 @@ async function getAllPosts() {
   return await res.json();
 }
 
-export { index, getAllPosts };
+export { index, getAllPosts, create };

@@ -26,7 +26,8 @@ const PostList = ({ post, index, user }) => {
           <tr>
             <td>{index + 1}</td>
             <td>{post.author.name}</td>
-            <td>{post.title}</td>
+            {/* <td>{post.title}</td> */}
+            <td>{post.title.length > 20 ? post.title.substring(0, 20) + "..." : post.title}</td>
             <td>{post.createdAt.substring(0, 10)}</td>
           </tr>
         </tbody>
