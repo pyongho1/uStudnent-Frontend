@@ -4,7 +4,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   position: sticky;
-  border: 1px solid;
+  /* border: 1px solid; */
   min-height: 4rem;
   max-height: 4rem;
   max-width: 100%;

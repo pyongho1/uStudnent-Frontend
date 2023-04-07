@@ -15,7 +15,7 @@ const PostList = ({ post, index, user }) => {
         <p>{post.author.name}</p>
         <p>{post.createdAt}</p>
       </div> */}
-      <Table striped>
+      <Table striped className={styles.strip}>
         {/* <thead>
             <tr>
             <th>#</th>
@@ -27,6 +27,9 @@ const PostList = ({ post, index, user }) => {
         <tbody>
           <tr>
             <td>{index + 1}</td>
+            <td>
+              <img src={post.author.photo} alt="" />
+            </td>
             <td>{post.author.name}</td>
             {/* <td>{post.title}</td> */}
             <td>
