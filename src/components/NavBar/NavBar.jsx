@@ -6,10 +6,10 @@ const NavBar = ({ user, handleLogout }) => {
     <nav>
       {user ? (
         <>
-          <p>Welcome, {user.name}</p>
+          {/* <p className="userName">Welcome, {user.name}</p> */}
 
-          <Link to="/profiles" className="navLists">
-            Profiles
+          <Link to="/sell" className="navLists">
+            사고팔고
           </Link>
 
           <Link to="/new" className="navLists">

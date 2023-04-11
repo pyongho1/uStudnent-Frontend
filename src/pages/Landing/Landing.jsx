@@ -13,6 +13,7 @@ const Landing = ({ user, posts }) => {
       <div className={styles.container}>
         <div className={styles.contentContainer}>
           <h1>hello, {user ? user.name : "friend"}</h1>
+          <a href="#">사고 팔기</a>
         </div>
       </div>
     </>
