@@ -10,6 +10,7 @@ import Profiles from "./pages/Profiles/Profiles";
 import ChangePassword from "./pages/ChangePassword/ChangePassword";
 import NewPost from "./pages/NewPost/NewPost";
 import PostDetail from "./pages/PostDetail/PostDetail";
+import BuySell from "./pages/BuySell/BuySell";
 
 // components
 import NavBar from "./components/NavBar/NavBar";
@@ -92,6 +93,12 @@ const App = () => {
           path="/posts/:id"
           element={
             <PostDetail posts={posts} />
+          }
+        />
+        <Route
+          path="/sell"
+          element={
+            <BuySell user={user} posts={posts} />
           }
         />
       </Routes>
