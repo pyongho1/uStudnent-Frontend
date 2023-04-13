@@ -38,8 +38,10 @@
   color: black;
   background-color: azure;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.3s ease-in-out;
 }
 
 .contentLinks > a:hover {
-  background-color: #94e19b;
+  background-color: #010101;
+  color: #fafafa;
 }

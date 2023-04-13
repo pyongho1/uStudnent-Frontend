@@ -34,12 +34,13 @@ const NavBar = ({ user, handleLogout }) => {
         </>
       ) : (
         <>
-          <li>
-            <Link to="/login">Log In</Link>
-          </li>
-          <li>
-            <Link to="/signup">Sign Up</Link>
-          </li>
+          <Link to="/login" className="navLists">
+            Log In
+          </Link>
+
+          <Link to="/signup" className="navLists">
+            Sign Up
+          </Link>
         </>
       )}
     </nav>

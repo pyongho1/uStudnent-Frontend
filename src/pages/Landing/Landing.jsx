@@ -12,7 +12,7 @@ const Landing = ({ user, posts }) => {
     <>
       <div className={styles.container}>
         <div className={styles.contentContainer}>
-          <h1>hello, {user ? user.name : "friend"}</h1>
+          <h1>안녕 👋, {user ? user.name : "친구"}</h1>
           <div className={styles.contentLinks}>
             <a href="sell">사고 팔기</a>
             <a href="#">룸메 구하기</a>

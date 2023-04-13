@@ -12,10 +12,20 @@ form > input {
   text-align: center;
 }
 
+form > input:focus {
+  outline: none;
+}
+
 form > textarea {
   width: 600px;
   padding: 20px 20px;
   text-align: center;
+  border-radius: 5px;
+  caret-color: #010101;
+}
+
+form > textarea:focus {
+  outline: none;
 }
 
 .contentLabel {
