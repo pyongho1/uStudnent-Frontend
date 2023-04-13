@@ -9,11 +9,13 @@ form {
 form > input {
   width: 600px;
   padding: 5px 5px;
+  text-align: center;
 }
 
 form > textarea {
   width: 600px;
   padding: 20px 20px;
+  text-align: center;
 }
 
 .contentLabel {
@@ -22,8 +24,24 @@ form > textarea {
 
 label {
   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 button {
   margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  width: 600px;
+  background-color: #010101;
+  color: #fafafa;
+  transition: 0.2s ease-in;
+}
+
+button:hover {
+  background-color: #94e19b;
+  color: #010101;
 }
