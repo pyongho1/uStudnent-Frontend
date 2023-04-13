@@ -20,7 +20,13 @@
   margin-top: 50px;
 }
 
-.contentContainer > a {
+.contentLinks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.contentLinks > a {
   text-decoration: none;
   border-radius: 10px;
   height: 125px;
@@ -30,8 +36,9 @@
   align-items: center;
   color: black;
   background-color: azure;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.contentContainer > a:hover {
+.contentLinks > a:hover {
   background-color: #94e19b;
 }
