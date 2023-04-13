@@ -1,3 +1,6 @@
+// Styles
+import styles from "./NewPost.module.css";
+
 import { useState } from "react";
 
 const NewPost = ({ handleAddPost, posts }) => {
@@ -19,10 +22,11 @@ const NewPost = ({ handleAddPost, posts }) => {
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title:</label>
-        <input required type="text" name="title" onChange={handleChange} />
-        <label htmlFor="content">Content</label>
+        <input required type="text" name="title" placeholder="제목" onChange={handleChange} />
+        <label className={styles.contentLabel} htmlFor="content">Content</label>
         <textarea
           name="content"
+          placeholder="내용"
           onChange={handleChange}
           cols="30"
           rows="10"

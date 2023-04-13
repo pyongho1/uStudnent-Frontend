@@ -1,29 +1,19 @@
 .container {
   display: flex;
-  flex-direction: column;
-  /* align-items: flex-start; */
-  /* justify-content: flex-start; */
-  /* border: 1px solid; */
-  width: 100%;
-  max-width: 70%;
-  margin: 0 100px;
-  /* text-align: center; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid;
+  margin-bottom: 10px;
 }
 
-td {
-  text-align: start;
+.profileBox {
+  display: flex;
+  align-items: center;
 }
 
-td > img {
+.profileBox > img {
   width: 50px;
   border-radius: 50%;
-}
-
-td:nth-child(2) {
-  text-align: start;
-  width: 30px;
-}
-
-.strip {
-  background-color: #fafafa;
+  margin-right: 10px;
 }
