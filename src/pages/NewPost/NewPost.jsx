@@ -31,7 +31,7 @@ const NewPost = ({ handleAddPost, posts }) => {
           cols="30"
           rows="10"
         ></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit" className={styles.createBtn}>Submit</button>
       </form>
     </>
   );

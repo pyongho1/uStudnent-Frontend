@@ -38,7 +38,7 @@ label {
   font-weight: 600;
 }
 
-button {
+.createBtn {
   margin-top: 20px;
   border: none;
   border-radius: 5px;
@@ -51,7 +51,7 @@ button {
   transition: 0.2s ease-in;
 }
 
-button:hover {
+.createBtn:hover {
   background-color: #94e19b;
   color: #010101;
 }
