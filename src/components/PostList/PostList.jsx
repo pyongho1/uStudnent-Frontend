@@ -1,12 +1,13 @@
 // Styles
 import styles from "./PostList.module.css";
 
-// Bootstrap
-import Table from "react-bootstrap/Table";
+import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
-const PostList = ({ post, index, user }) => {
+const PostList = ({ post, index, user, handleDeletePost }) => {
+  // const { id } = useParams();
+  // console.log(id);
   return (
     <>
       <div className={styles.container}>
@@ -26,6 +27,7 @@ const PostList = ({ post, index, user }) => {
         </div>
         <div className={styles.datebox}>
           <p>{post.createdAt.substring(0, 10)}</p>
+          {/* <button onClick={() => handleDeletePost(id)}>DELETE</button> */}
         </div>
       </div>
     </>

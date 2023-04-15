@@ -44,6 +44,11 @@ const App = () => {
     navigate("/");
   };
 
+  const handleDeletePost = async (id) => {
+    const deletedPost = await postService.deletePost(id);
+    setPosts(posts.filter((b) => b._id !== deletedPost._id));
+    navigate("/sell");
+  };
   useEffect(() => {
     const fetchPosts = async () => {
       const postData = await postService.getAllPosts();
@@ -89,16 +94,20 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route 
+        <Route
           path="/posts/:id"
           element={
-            <PostDetail posts={posts} />
+            <PostDetail posts={posts} handleDeletePost={handleDeletePost} />
           }
         />
         <Route
           path="/sell"
           element={
-            <BuySell user={user} posts={posts} />
+            <BuySell
+              user={user}
+              posts={posts}
+              handleDeletePost={handleDeletePost}
+            />
           }
         />
       </Routes>

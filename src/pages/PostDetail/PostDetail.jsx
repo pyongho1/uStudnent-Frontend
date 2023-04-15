@@ -6,7 +6,7 @@ import styles from "./PostDetail.module.css";
 
 import * as postService from "../../services/postService";
 
-const PostDetail = () => {
+const PostDetail = ({ handleDeletePost }) => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
 
@@ -27,6 +27,7 @@ const PostDetail = () => {
       </div>
       <h3>{post.title}</h3>
       <p>{post.content}</p>
+      <button onClick={() => handleDeletePost(id)}>DELETE</button>
     </div>
   ) : (
     <p>Loading...</p>
