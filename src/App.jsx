@@ -44,6 +44,12 @@ const App = () => {
     navigate("/");
   };
 
+  const handleUpdatePost = async (postData) => {
+    const updatedPost = await postService.update(postData);
+    setPosts(posts.map((b) => (postData._id === b._id ? updatedPost : b)));
+    navigate("/sell");
+  };
+
   const handleDeletePost = async (id) => {
     const deletedPost = await postService.deletePost(id);
     setPosts(posts.filter((b) => b._id !== deletedPost._id));
