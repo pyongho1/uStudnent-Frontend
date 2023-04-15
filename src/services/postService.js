@@ -37,6 +37,18 @@ const show = async (id) => {
   }
 };
 
+const deletePost = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${tokenService.getToken()}` },
+    });
+    return res.json();
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 async function getAllPosts() {
   const res = await fetch(BASE_URL, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
@@ -44,4 +56,4 @@ async function getAllPosts() {
   return await res.json();
 }
 
-export { index, getAllPosts, create, show };
+export { index, getAllPosts, create, show, deletePost };
